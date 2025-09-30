@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "node-hello-app"
+        IMAGE_NAME = "hey-irshad"
         IMAGE_TAG = "latest"
-        CONTAINER_NAME = "node-hello-container"
+        CONTAINER_NAME = "hey-irshad-container"
     }
 
     stages {
