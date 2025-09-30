@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Stop and remove existing container if running
-                sh 'docker rm -f $(docker ps -q)'
+                sh "docker rm -f ${CONTAINER_NAME} || true"
 
                 // Run the new container
                 sh "docker run -d --name ${CONTAINER_NAME} -p 3000:3000 ${IMAGE_NAME}:${IMAGE_TAG}"
